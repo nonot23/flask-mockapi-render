@@ -10,30 +10,56 @@ courses = [
     "name": "Intro to Python",
     "description":
     "Learn the basics of Python, a popular programming language for both beginners and experts.",
-    "category": "Programming Fundamentals"
+    "category": "Programming Fundamentals",
+    "image": "https://i.ytimg.com/vi/0VoF_lc-16o/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBWBjZihGempHZCXMcxLm4d7m8i8g",
+    "video": "https://www.youtube.com/embed/0VoF_lc-16o"
   },
   {
     "id": 2,
     "name": "Advanced JavaScript",
     "description":
     "Take your JavaScript skills to the next level with this advanced course.",
-    "category": "Web Development"
+    "category": "Web Development",
+    "image" : "https://i.ytimg.com/vi/PGZ7QiKdumo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSIt6eSRUWBtgXhw04BLeAHiEaug",
+    "video": "https://www.youtube.com/embed/PGZ7QiKdumo"
   },
   {
     "id": 3,
-    "name": "Machine Learning with TensorFlow",
+    "name": "Machine Learning ",
     "description":
-    "Learn how to build machine learning models using the popular TensorFlow library.",
-    "category": "Machine Learning"
+    "Learn how to build machine learning ",
+    "category": "Machine Learning",
+    "image": "https://i.ytimg.com/vi/lA5MHygnFcg/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCfEDjNHKsFdz7wTWhwuMTm-vgmqQ",
+    "video": "https://www.youtube.com/embed/lA5MHygnFcg&pp=ygUaYm9ybnRvZGV2IG1hY2hpbmUgbGVhcm5pbmc%3D"
   },
   {
     "id": 4,
     "name": "Data Science with R",
     "description":
     "Explore the world of data science using the R programming language.",
-    "category": "Data Science"
+    "category": "Data Science",
+    "image": "https://i.ytimg.com/vi/tlakIID89Rk/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB8u6INK0AOLJ02nTw9prJ4awh99w",
+    "video" : "https://www.youtube.com/embed/tlakIID89Rk"
   },
-  # ... add more courses here ...
+  {
+    "id": 5,
+    "name": "CSS Basic",
+    "description":
+    "Explore the world css.",
+    "category": "Web Development",
+    "image": "https://i.ytimg.com/vi/9H6ubALp8vo/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCNevF797NPW5aDzAejrtAOyLw2sA",
+    "video" : "https://www.youtube.com/embed/9H6ubALp8vo"
+  },
+  {
+    "id": 6,
+    "name": "HTML Basic",
+    "description":
+    "Explore the world html.",
+    "category": "Web Development",
+    "image": "https://i.ytimg.com/vi/-jzu5YH6OMQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDFVaUm1ckDJw9Ypa2j3z3P8zUQ9Q",
+    "video" : "https://www.youtube.com/embed/-jzu5YH6OMQ"
+  }
+  
 ]
 
 
