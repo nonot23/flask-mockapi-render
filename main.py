@@ -12,7 +12,20 @@ courses = [
     "Learn the basics of Python, a popular programming language for both beginners and experts.",
     "category": "Programming Fundamentals",
     "image": "https://i.ytimg.com/vi/0VoF_lc-16o/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBWBjZihGempHZCXMcxLm4d7m8i8g",
-    "video": "https://www.youtube.com/embed/0VoF_lc-16o"
+    "lectures": [
+      {
+        "id": 1,
+        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part 1",
+        "duration": "29:27",
+        "video": "https://www.youtube.com/embed/Jw3h06aIHYk&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs"
+      },
+      {
+        "id": 2,
+        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part2",
+        "duration": "10:32",
+        "video": "https://www.youtube.com/embed/I_fpG3wrVaQ&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs&index=2"
+      },
+      
   },
   {
     "id": 2,
