@@ -78,7 +78,19 @@ courses = [
 
 @app.route('/')
 def index():
-  return "<h1>Final API</h1><br>Here's how to use the API: <br><li><b>Access course details</b> available at /courses/<int:course_id> where course_id is the ID of each course<br>Example: https://borntodev-final-project-api.borntodev.repl.co/courses/1</li><li><b>View all courses</b> available at /courses to display all course information<br>Example: https://borntodev-final-project-api.borntodev.repl.co/courses</li><li><b>View all categories</b> available at /categories to display all category names<br>Example: https://borntodev-final-project-api.borntodev.repl.co/categories</li><li><b>View courses by category</b> available at /categories/<string:category_name>/courses where you input the category name to get all courses in that category<br>Example: https://borntodev-final-project-api.borntodev.repl.co/categories/Web%20Development/courses (Case sensitive)</li><p>Good luck with your Final Project! 😊</p>"
+  return """
+<h1>Final API / API สำหรับโครงการ</h1>
+<br>วิธีการใช้งาน API:<br>
+<li><b>ดูรายละเอียดคอร์ส</b> ที่ /courses/<int:course_id> โดย course_id คือ ID ของแต่ละคอร์ส<br>
+ตัวอย่าง: https://borntodev-final-project-api.borntodev.repl.co/courses/1</li>
+<li><b>ดูคอร์สทั้งหมด</b> ที่ /courses เพื่อแสดงข้อมูลคอร์สทั้งหมด<br>
+ตัวอย่าง: https://borntodev-final-project-api.borntodev.repl.co/courses</li>
+<li><b>ดูหมวดหมู่ทั้งหมด</b> ที่ /categories เพื่อแสดงชื่อหมวดหมู่ทั้งหมด<br>
+ตัวอย่าง: https://borntodev-final-project-api.borntodev.repl.co/categories</li>
+<li><b>ดูคอร์สตามหมวดหมู่</b> ที่ /categories/<string:category_name>/courses โดยใส่ชื่อหมวดหมู่เพื่อดูคอร์สในหมวดนั้น<br>
+ตัวอย่าง: https://borntodev-final-project-api.borntodev.repl.co/categories/Web%20Development/courses (ต้องตรงตัวพิมพ์ใหญ่-เล็ก)</li>
+<p>ขอให้โชคดีกับโปรเจคของคุณ! 😊</p>
+"""
 
 
 @app.route('/courses', methods=['GET'])
