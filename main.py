@@ -5,145 +5,133 @@ app = Flask(__name__)
 CORS(app)
 
 courses = [
-  {
-    "id": 1,
-    "name": "Intro to Python",
-    "description":
-    "Learn the basics of Python, a popular programming language for both beginners and experts.",
-    "category": "Programming Fundamentals",
-    "image": "https://i.ytimg.com/vi/0VoF_lc-16o/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBWBjZihGempHZCXMcxLm4d7m8i8g",
-    "lectures": [
-      {
-        
-        {
-          "id": 1,
-          "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part 1",
-          "duration": "29:27",
-          "video": "https://www.youtube.com/embed/Jw3h06aIHYk?list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs"
-        },
-        {
-          "id": 2,
-          "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part2",
-          "duration": "33:5",
-          "video": "https://www.youtube.com/embed/I_fpG3wrVaQ?list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs&index=2"
-        }
-      } 
-    ]
-  } ,
-    
-  {
-    "id": 2,
-    "name": "Advanced JavaScript",
-    "description":
-    "Take your JavaScript skills to the next level with this advanced course.",
-    "category": "Web Development",
-    "image" : "https://i.ytimg.com/vi/PGZ7QiKdumo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSIt6eSRUWBtgXhw04BLeAHiEaug",
-    "lectures": [
-      
-      {
+    {
         "id": 1,
-        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part 1",
-        "duration": "29:27",
-        "video": "https://www.youtube.com/embed/Jw3h06aIHYk&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs"
-      },
-      {
+        "name": "Intro to Python",
+        "description": "Learn the basics of Python, a popular programming language for both beginners and experts.",
+        "category": "Programming Fundamentals",
+        "image": "img/python.png",
+        "lectures": [
+            {
+                "lectureTitle": "เข้าใจโครงสร้างพื้นฐานของภาษา Python",
+                "totalDuration": "62 นาที",
+                "videos": [
+                    {
+                        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part 1",
+                        "duration": "29:27 นาที",
+                        "video": "https://www.youtube.com/embed/Jw3h06aIHYk?list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs"
+                    },
+                    {
+                        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part 2",
+                        "duration": "33:05 นาที",
+                        "video": "https://www.youtube.com/embed/I_fpG3wrVaQ?list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs&index=2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "id": 2,
-        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part2",
-        "duration": "10:32",
-        "video": "https://www.youtube.com/embed/I_fpG3wrVaQ&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs&index=2"
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Machine Learning ",
-    "description":
-    "Learn how to build machine learning ",
-    "category": "Machine Learning",
-    "image": "https://i.ytimg.com/vi/lA5MHygnFcg/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCfEDjNHKsFdz7wTWhwuMTm-vgmqQ",
-    "lectures": [
-      {
-        "id": 1,
-        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part 1",
-        "duration": "29:27",
-        "video": "https://www.youtube.com/embed/Jw3h06aIHYk&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs"
-      },
-      {
-        "id": 2,
-        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part2",
-        "duration": "10:32",
-        "video": "https://www.youtube.com/embed/I_fpG3wrVaQ&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs&index=2"
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Data Science with R",
-    "description":
-    "Explore the world of data science using the R programming language.",
-    "category": "Data Science",
-    "image": "https://i.ytimg.com/vi/tlakIID89Rk/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB8u6INK0AOLJ02nTw9prJ4awh99w",
-    "lectures": [
-      {
-        "id": 1,
-        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part 1",
-        "duration": "29:27",
-        "video": "https://www.youtube.com/embed/Jw3h06aIHYk&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs"
-      },
-      {
-        "id": 2,
-        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part2",
-        "duration": "10:32",
-        "video": "https://www.youtube.com/embed/I_fpG3wrVaQ&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs&index=2"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "CSS Basic",
-    "description":
-    "Explore the world css.",
-    "category": "Web Development",
-    "image": "https://i.ytimg.com/vi/9H6ubALp8vo/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCNevF797NPW5aDzAejrtAOyLw2sA",
-    "lectures": [
-      {
-        "id": 1,
-        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part 1",
-        "duration": "29:27",
-        "video": "https://www.youtube.com/embed/Jw3h06aIHYk&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs"
-      },
-      {
-        "id": 2,
-        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part2",
-        "duration": "10:32",
-        "video": "https://www.youtube.com/embed/I_fpG3wrVaQ&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs&index=2"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "name": "HTML Basic",
-    "description":
-    "Explore the world html.",
-    "category": "Web Development",
-    "image": "https://i.ytimg.com/vi/-jzu5YH6OMQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDFVaUm1ckDJw9Ypa2j3z3P8zUQ9Q",
-    "lectures": [
-      {
-        "id": 1,
-        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part 1",
-        "duration": "29:27",
-        "video": "https://www.youtube.com/embed/Jw3h06aIHYk&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs"
-      },
-      {
-        "id": 2,
-        "title": "สรุปพื้นฐาน Python 3 ใน 1 ชั่วโมง - Part2",
-        "duration": "10:32",
-        "video": "https://www.youtube.com/embed/I_fpG3wrVaQ&list=PLcLc3KmtwXNRhXfBf6R46j5CU9Fy2qUSs&index=2"
-      }
-    ]
-  }
-  
+        "name": "Basic JavaScript",
+        "description": "Take your JavaScript skills to the next level with this basic course.",
+        "category": "Web Development",
+        "image": "img/js.png",
+        "lectures": [
+            {
+                "lectureTitle": "เข้าใจโครงสร้างพื้นฐานของภาษา JavaScript",
+                "totalDuration": "3 ชั่วโมง 16 นาที",
+                "videos": [
+                    {
+                        "title": "สรุปพื้นฐาน JavaScript",
+                        "duration": "3:16:22 นาที",
+                        "video": "https://www.youtube.com/embed/PGZ7QiKdumo"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Machine Learning",
+        "description": "Learn how to build machine learning",
+        "category": "Machine Learning",
+        "image": "img/manchin.png",
+        "lectures": [
+            {
+                "lectureTitle": "Machine Learning",
+                "totalDuration": "8 นาที",
+                "videos": [
+                    {
+                        "title": "เริ่มเขียน Machine Learning ใน 5 นาที",
+                        "duration": "8:05 นาที",
+                        "video": "https://www.youtube.com/embed/lA5MHygnFcg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Data Science with R",
+        "description": "Explore the world of data science using the R programming language.",
+        "category": "Data Science",
+        "image": "img/R.png",
+        "lectures": [
+            {
+                "lectureTitle": "เริ่มต้นใช้งานภาษา R",
+                "totalDuration": "36 นาที",
+                "videos": [
+                    {
+                        "title": "เริ่มต้นใช้งานภาษา R เพื่องาน DataScience",
+                        "duration": "36:23 นาที",
+                        "video": "https://www.youtube.com/embed/tlakIID89Rk&t"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "html Basic",
+        "description": "Explore the world html.",
+        "category": "Web Development",
+        "image": f"{host_url}/img/html.png",
+        "lectures": [
+            {
+                "lectureTitle": "เข้าใจโครงสร้างพื้นฐานของภาษา html",
+                "totalDuration": "11 นาที",
+                "videos": [
+                    {
+                        "title": "มาเรียนเขียนเว็บด้วย HTML 5 !! ฉบับที่เร็วที่สุด !",
+                        "duration": "11:08 นาที",
+                        "video": "https://www.youtube.com/embed/-jzu5YH6OMQ"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "CSS Basic",
+        "description": "Explore the world css.",
+        "category": "Web Development",
+        "image": "img/css.png",
+        "lectures": [
+            {
+                "lectureTitle": "เข้าใจโครงสร้างพื้นฐานของภาษา CSS",
+                "totalDuration": "10 นาที",
+                "videos": [
+                    {
+                        "title": "มาหัดเขียน CSS3 ที่ช่วยให้เว็บสวยขึ้น แบบไว ๆ ใน 10 นาที",
+                        "duration": "10:40 นาที",
+                        "video": "https://www.youtube.com/embed/9H6ubALp8vo"
+                    }
+                ]
+            }
+        ]
+    }
 ]
+
 
 
 @app.route('/')
