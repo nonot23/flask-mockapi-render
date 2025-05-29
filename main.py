@@ -4,6 +4,8 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+host_url = "https://your-repl-url.replit.app"  # แทนที่ด้วย URL จริงของ Repl คุณ
+
 courses = [
     {
         "id": 1,
