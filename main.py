@@ -1,10 +1,13 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+from flask import send_from_directory
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-host_url = "https://your-repl-url.replit.app"  # แทนที่ด้วย URL จริงของ Repl คุณ
+
+host_url = os.getenv("RENDER_EXTERNAL_URL", "http://localhost:5000")
 
 courses = [
     {
@@ -12,7 +15,7 @@ courses = [
         "name": "Intro to Python",
         "description": "Learn the basics of Python, a popular programming language for both beginners and experts.",
         "category": "Programming Fundamentals",
-        "image": "img/python.png",
+        "image": f"{host_url}/img/python.png",
         "lectures": [
             {
                 "lectureTitle": "เข้าใจโครงสร้างพื้นฐานของภาษา Python",
@@ -37,7 +40,7 @@ courses = [
         "name": "Basic JavaScript",
         "description": "Take your JavaScript skills to the next level with this basic course.",
         "category": "Web Development",
-        "image": "img/js.png",
+        "image": f"{host_url}/img/js.png",
         "lectures": [
             {
                 "lectureTitle": "เข้าใจโครงสร้างพื้นฐานของภาษา JavaScript",
@@ -57,7 +60,7 @@ courses = [
         "name": "Machine Learning",
         "description": "Learn how to build machine learning",
         "category": "Machine Learning",
-        "image": "img/manchin.png",
+        "image": f"{host_url}/img/manchin.png",
         "lectures": [
             {
                 "lectureTitle": "Machine Learning",
@@ -77,7 +80,7 @@ courses = [
         "name": "Data Science with R",
         "description": "Explore the world of data science using the R programming language.",
         "category": "Data Science",
-        "image": "img/R.png",
+        "image": f"{host_url}/img/R.png",
         "lectures": [
             {
                 "lectureTitle": "เริ่มต้นใช้งานภาษา R",
@@ -86,7 +89,7 @@ courses = [
                     {
                         "title": "เริ่มต้นใช้งานภาษา R เพื่องาน DataScience",
                         "duration": "36:23 นาที",
-                        "video": "https://www.youtube.com/embed/tlakIID89Rk&t"
+                        "video": "https://www.youtube.com/embed/tlakIID89Rk"
                     }
                 ]
             }
@@ -117,16 +120,21 @@ courses = [
         "name": "CSS Basic",
         "description": "Explore the world css.",
         "category": "Web Development",
-        "image": "img/css.png",
+        "image": f"{host_url}/img/css.png",
         "lectures": [
             {
                 "lectureTitle": "เข้าใจโครงสร้างพื้นฐานของภาษา CSS",
-                "totalDuration": "10 นาที",
+                "totalDuration": "22 นาที",
                 "videos": [
                     {
                         "title": "มาหัดเขียน CSS3 ที่ช่วยให้เว็บสวยขึ้น แบบไว ๆ ใน 10 นาที",
                         "duration": "10:40 นาที",
                         "video": "https://www.youtube.com/embed/9H6ubALp8vo"
+                    },
+                    {
+                        "title": "จัด Layout เว็บแบบไม่ซ้ำใคร!!! ด้วย Flexbox และ CSS Grid",
+                        "duration": "12:08 นาที",
+                        "video": "https://www.youtube.com/embed/UHPN0Wd2XLE"
                     }
                 ]
             }
@@ -152,6 +160,9 @@ def index():
 <p>ขอให้โชคดีกับโปรเจคของคุณ! 😊</p>
 """
 
+@app.route('/img/<path:filename>')
+def serve_image(filename):
+    return send_from_directory('img', filename)
 
 @app.route('/courses', methods=['GET'])
 def get_all_courses():
