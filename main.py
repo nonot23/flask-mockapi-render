@@ -195,6 +195,15 @@ def get_courses_in_category(category_name):
   else:
     return jsonify({"message": "No courses found in this category"}), 404
 
+@app.route('/search', methods=['GET'])
+def search_courses():
+    keyword = request.args.get('keyword', '').lower()
+    results = [
+        course for course in courses
+        if keyword in course["name"].lower()
+    ]
+    return jsonify(results)
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=81)
